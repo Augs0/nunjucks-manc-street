@@ -1,10 +1,22 @@
-<!doctype html>
-<html  lang="en">
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>{{ title }}</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manchester Street Art</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="/styles/styles.css" />
   </head>
-  <body>
-    {% block  content %}
-    {% endblock %}
+  <body class="{{ body_class }}">
+    {% include "./partials/_header.njk" %} {% include "./partials/_nav.njk" %}
+    <main class="main-wrapper">
+      {% block content %} {% endblock %}
+      <hr />
+    </main>
+    {% include "./partials/_footer.njk" %}
   </body>
 </html>

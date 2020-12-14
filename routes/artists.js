@@ -3,12 +3,12 @@ let router = express.Router()
 
 router.get('/', async function (req, res, next) {
     let data = {
-        message: 'About Manchester Street Art',
+        message: 'About Manchester Artists',
         layout: 'layout.njk',
-        title: 'About Manchester Street Art'
+        title: 'About Manchester Artists'
     }
 
-    res.render('about.njk', data)
+    res.render('artists.njk', data)
 })
 
 module.exports = router

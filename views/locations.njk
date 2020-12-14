@@ -1,0 +1,6 @@
+{% set body_class = "location" %} {% set active_page = "locations" %} {% from
+"partials/_location_cards.njk" import locationCard %} {% extends "layout.njk" %}
+{% block content %}
+<h2>Locations</h2>
+<div class="location-wrapper">{% include "./data/locationList.njk" %}</div>
+{% endblock %}

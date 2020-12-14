@@ -1,0 +1,13 @@
+{% set active_page = active_page|default('home') -%}
+
+  <nav class="navigation">
+      <ul>
+        <li {% if active_page == "home" %} class="active"{% endif
+  %}><a href="/">Home</a></li>
+        <li {% if active_page == "artists" %} class="active"{% endif
+  %}><a href="/artists">Artists</a></li>
+        <li {% if active_page == "locations" %} class="active"{% endif
+  %}><a href="/locations">Locations</a></li>
+      </ul>
+    </nav>
+  

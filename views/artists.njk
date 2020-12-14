@@ -1,0 +1,8 @@
+{% set body_class = "artists" %} {% set active_page = "artists" %} {% from
+"partials/_artist-cards.njk" import artistCard %} {% extends "layout.njk" %} {%
+block content %}
+<h2>Artists</h2>
+<div class="artists-wrapper">
+{% include "./data/artistsList.njk" %}
+</div>
+{% endblock %}

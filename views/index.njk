@@ -1,13 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Manchester Street Art</title>
-  </head>
-  <body>
-    {% extends layout %} {% block content %}
-    <h1>{{ message }}</h1>
-    {% endblock %}
-  </body>
-</html>
+{% set body_class = "home" %} {% set active_page = "home" %} {% extends
+"layout.njk" %} {% block content %}
+<h2>About</h2>
+<p>
+  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus aliquid,
+  voluptates impedit obcaecati eveniet quo nulla unde magnam nostrum
+  voluptatibus eaque magni numquam? Ex sequi voluptatum debitis quae, sed
+  consequuntur ducimus eos dolorum magnam velit laboriosam, est ipsam possimus
+  animi repellat earum illum perspiciatis iste itaque mollitia tempora
+  cupiditate beatae!
+</p>
+{% endblock %}

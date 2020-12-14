@@ -1,0 +1,23 @@
+{% macro artistCard( name, url, image_alt, overview) %}
+
+<div class="artist-profile">
+  <img
+    class="profile-image"
+    src="/images/defaultprofile.png"
+    alt="{{ image_alt }}"
+  />
+  <div class="artist-about">
+    <h3 class="artist-name">
+      {{ name }}
+    </h3>
+    <div class="artist-overview">
+      <h4>About {{ name }}</h4>
+      <p>{{ overview }}</p>
+      <a href="{{ url }}" alt="link to artist's work"
+        >Read more about {{ name }}</a
+      >
+    </div>
+  </div>
+</div>
+
+{% endmacro %}

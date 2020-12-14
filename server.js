@@ -1,10 +1,12 @@
 const express = require("express");
 
 const app = express();
+app.use(express.static('public'));
 let nunjucks = require('nunjucks');
-const path = require('path');
+
 const homeRoute = require('./routes/home');
-const aboutRoute = require('./routes/about');
+const aboutRoute = require('./routes/artists');
+const locationsRoute = require('./routes/locations');
 
 const port = 5000;
 
@@ -16,7 +18,8 @@ nunjucks.configure('views/', {
 })
 
 app.use('/', homeRoute);
-app.use('/about', aboutRoute);
+app.use('/artists', aboutRoute);
+app.use('/locations', locationsRoute);
 
 
 app.listen(port, () => {

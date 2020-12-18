@@ -1,17 +1,12 @@
 {% macro locationCard( name, area, image) %}
 
 <div class="location-individual">
-  <img
-    class="location-image"
-    src="{{image}}"
-    alt="{{ name }}"
-  />
+  <img class="location-image" src="{{ image }}" alt="{{ name }}" />
   <div class="location-about">
     <h3>
       {{ name }}
     </h3>
-    <p>{{area}}</p>
-    </div>
+    <p>{{ area }}</p>
   </div>
 </div>
 

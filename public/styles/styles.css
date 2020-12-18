@@ -28,10 +28,27 @@ h1 {
 
 h2 {
   border-bottom: solid 3px var(--hilite-two);
+  font-size: 3rem;
 }
 
 a {
   color: var(--dark);
+}
+
+header {
+  padding: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  /* background-image: url('../images/dotslines.png');
+  background-repeat: no-repeat;
+  background-color: var(--bg);
+  background-position: top right;
+  background-attachment: fixed; */
+}
+
+.decoration {
+  width: 17%;
+  object-fit: cover;
 }
 
 .navigation ul {
@@ -54,9 +71,15 @@ a {
 
 .main-wrapper {
   display: flex;
+  flex: 1 0 auto;
   padding: 40px;
   flex-direction: column;
   max-width: 80%;
+  align-items: center;
+}
+
+.lead {
+  font-size: 2rem;
 }
 
 hr {
@@ -67,6 +90,45 @@ hr {
 
 .artists-wrapper,
 .location-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.alert {
+  padding: 10px;
+  background-color: var(--hilite-two);
+  color: black;
+  margin-bottom: 10px;
+  text-align: center;
+  display: none;
+}
+
+form fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+form legend {
+  border-bottom: solid 2px var(--dark);
+}
+
+form input,
+form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.artist-profile {
   display: flex;
 }
 
@@ -79,15 +141,25 @@ hr {
   border: 3px solid var(--dark);
   padding: 10px;
   margin: 5px;
-  max-width: 250px;
+}
+
+.location-individual:nth-child(even) {
+  background-color: var(--dark);
+  color: var(--bg);
 }
 
 .profile-image {
-  width: 100%;
+  max-width: 100%;
+  margin-right: 5px;
+}
+
+.artist-name {
+  font-size: 2rem;
 }
 
 footer {
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
   padding: 10px 0;
@@ -96,4 +168,14 @@ footer {
   height: 70px;
   width: 100%;
   font-size: 2rem;
+}
+
+@media (max-width: 678px) {
+  header {
+    flex-direction: column;
+  }
+  .artist-profile {
+    max-width: 250px;
+    flex-direction: column;
+  }
 }

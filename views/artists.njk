@@ -2,7 +2,24 @@
 "partials/_artist-cards.njk" import artistCard %} {% extends "layout.njk" %} {%
 block content %}
 <h2>Artists</h2>
-<div class="artists-wrapper">
-{% include "./data/artistsList.njk" %}
-</div>
+<form id="artist-form">
+  <div class="alert">Artist added</div>
+  <fieldset>
+    <legend>Add a street artist</legend>
+    <label for="artist-name">Artist Name</label>
+    <input type="text" name="artist-name" id="artist-name" required />
+    <label for="artist-bio">Artist bio (keep it short!)</label>
+    <textarea
+      name="artist-bio"
+      id="artist-bio"
+      cols="30"
+      rows="10"
+      required
+    ></textarea>
+    <label for="url">Artist website or social network page</label>
+    <input type="text" name="url" id="url" />
+    <button type="submit">Submit</button>
+  </fieldset>
+</form>
+<div class="artists-wrapper">{% include "./data/artistsList.njk" %}</div>
 {% endblock %}
